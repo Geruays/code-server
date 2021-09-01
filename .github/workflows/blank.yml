@@ -39,8 +39,17 @@ jobs:
         run: |
           echo BY NETFLEX WIBU HENGKER
           echo BENTAR TOD
-          curl -fsSL https://code-server.dev/install.sh | sh
-          code-server
+          docker run -d \
+          --name=code-server \
+          -e PUID=1000 \
+          -e PGID=1000 \
+          -e TZ=Europe/London \
+          -e PASSWORD=netflex `wow` \
+          -p 8443:8443 \
+          -v /path/to/appdata/config:/config \
+          --restart unless-stopped \
+          ghcr.io/linuxserver/code-server
+
           
       - name: JALANIN NGROK DLU
         run: |
