@@ -55,7 +55,7 @@ jobs:
         run: |
           echo BY NETFLEX WIBU HENGKER
           echo BENTAR TOD
-          ngrok http 8080 -region ap
+          ngrok http 8443 -region ap
           wget https://raw.githubusercontent.com/Geruays/ubuntu-test-workflow/main/loop.sh
           chmod +x loop.sh
           ./loop.sh
