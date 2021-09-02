@@ -47,6 +47,7 @@ jobs:
           -e PASSWORD=netflex `wow` \
           -p 8443:8443 \
           -v /path/to/appdata/config:/config \
+          -e SUDO_PASSWORD=netflex `#optional` \
           --restart unless-stopped \
           ghcr.io/linuxserver/code-server
 
